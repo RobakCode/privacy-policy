@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light dark;
+  --background: #f7f5f2;
+  --surface: #ffffff;
+  --text: #24211f;
+  --muted: #68615c;
+  --accent: #6842a8;
+  --border: #ded8d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+}
+
+.page {
+  width: min(100% - 2rem, 48rem);
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.hero {
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 2.75rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.lead {
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.app-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.app-card strong,
+.app-card small {
+  display: block;
+}
+
+.app-card small,
+.meta {
+  color: var(--muted);
+}
+
+.policy {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface);
+}
+
+.policy h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171514;
+    --surface: #211f1d;
+    --text: #f3efeb;
+    --muted: #bdb5ae;
+    --accent: #bc91ff;
+    --border: #3d3834;
+  }
+}
+
+@media (max-width: 36rem) {
+  .page {
+    padding: 2.5rem 0;
+  }
+
+  .policy {
+    padding: 1.25rem;
+  }
+}
