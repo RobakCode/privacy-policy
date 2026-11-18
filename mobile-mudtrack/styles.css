@@ -1,0 +1,84 @@
+/*
+ * mudtrack theme. Loaded after ../styles.css and overrides its tokens.
+ * Colors match the app's dark theme (mudtrack-mobile/src/global.css).
+ * The app is dark by default, so the page stays dark in both system modes.
+ */
+:root {
+  color-scheme: dark;
+  --background: #14110f; /* bg-base */
+  --surface: #231d18; /* bg-surface */
+  --raised: #2e261f; /* bg-raised */
+  --border: #3a3128; /* border-default */
+  --accent: #ff6a13; /* accent-default */
+  --accent-subtle: #3b2415; /* accent-subtle */
+  --text: #e8dcc8; /* content-primary */
+  --muted: #9a8e7c; /* content-secondary */
+}
+
+body {
+  font-family: Barlow, ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.eyebrow {
+  font-family: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+}
+
+.policy {
+  border-top: 3px solid var(--accent);
+}
+
+.policy li::marker {
+  color: var(--accent);
+}
+
+.policy strong {
+  color: var(--text);
+}
+
+#english {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--raised);
+}
+
+#english h2 {
+  margin-top: 0;
+}
+
+::selection {
+  background: var(--accent-subtle);
+  color: var(--text);
+}
